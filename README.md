@@ -1,7 +1,7 @@
 # Baggy_recon
 
 I've written a Medium Post about this:
-https://medium.com/@sherwyn.moodley/building-a-bug-bounty-box-in-aws-e4c74cac114f
+https://medium.com/@sherwyn.moodley/building-a-bug-bounty-box-in-aws-dcc691417833
 
 
 setup.sh
