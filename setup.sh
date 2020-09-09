@@ -30,6 +30,7 @@ git clone https://github.com/projectdiscovery/nuclei.git; cd nuclei/cmd/nuclei/;
 GO111MODULE=auto go get -u -v github.com/projectdiscovery/subfinder/cmd/subfinder
 go get github.com/tomnomnom/hacks/waybackurls
 go get -u github.com/tomnomnom/assetfinder
+git clone https://github.com/ghostlulzhacks/waybackMachine.git
 GO111MODULE=on go get -u -v github.com/hahwul/dalfox
 go get github.com/ffuf/ffuf
 go get -u github.com/tomnomnom/gf
