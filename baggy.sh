@@ -8,8 +8,8 @@ echo  "${red} Performing : ${green} Asset Finder ${reset}"
 echo '----------------------------------------------------------------------'
 cat scope.txt | while read line; do ~/go/bin/assetfinder -subs-only $line | tee -a assets; done
 cat assets | ~/go/bin/httprobe | tee hosts
-cat assets | while read line; do ~/go/bin/gau -subs -providers otx $line; done | tee -a otx
-cat assets hosts otx | sort -u | tee final_urls
+cat assets | while read line; do ~/waybackMachine/waybackMachine.py $line | tee -a wayback; done
+cat assets hosts wayback | sort -u | tee final_urls
 clear
 echo '----------------------------------------------------------------------'
 echo  "${red} Performing : ${green} LFI ${reset}"
