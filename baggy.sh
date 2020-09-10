@@ -47,6 +47,6 @@ cat rce | ~/go/bin/anew | xargs -I@ ~/go/bin/jaeles scan -c 100 -s /tmp/jaeles-s
 echo '______________________________________________________________________'
 echo  "${red} Performing : ${green} CVEs ${reset}"
 echo '----------------------------------------------------------------------'
-cat final_urls | ~/go/bin/nuclei -c 200 -pbar -t ~/nuclei-templates/cves -o nuclei_cves 
-cat final_urls | ~/go/bin/anew | xargs -I@ ~/go/bin/jaeles scan -c 100 -s /tmp/jaeles-signatures/cves/ -u @ 
+cat final_urls | ~/go/bin/nuclei -c 200 -pbar -t ~/nuclei-templates/ -o nuclei_output
+cat final_urls | ~/go/bin/anew | xargs -I@ ~/go/bin/jaeles scan -c 100 -s /tmp/jaeles-signatures/ -u @ 
 
