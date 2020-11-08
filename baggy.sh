@@ -25,7 +25,7 @@ echo '______________________________________________________________________'
 echo  "${red} Performing : ${green} GF Sorting ${reset}"
 echo '----------------------------------------------------------------------'
 mkdir gfsort
-gf --list | while read line; do cat gau | ~/go/bin/gf $line | tee gfsort/$line; done
+~/go/bin/gf --list | while read line; do cat gau | ~/go/bin/gf $line | tee gfsort/$line; done
 echo '______________________________________________________________________'
 echo  "${red} Performing : ${green} Nuclei and Jaeles Testing per GF ${reset}"
 echo '----------------------------------------------------------------------'
