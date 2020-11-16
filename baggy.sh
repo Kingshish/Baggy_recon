@@ -53,4 +53,4 @@ echo '______________________________________________________________________'
 echo  "${red} Performing : ${green} BIG SCANS ${reset}"
 echo '----------------------------------------------------------------------'
 cat hosts | ~/go/bin/nuclei -t ~/nuclei-templates/ -pbar -severity high,critical -o NUKED.txt | ~/go/bin/notify &
-cat gau | ~/go/bin/qsreplace | sort -u | head -n 1000 | | xargs -I@ ~/go/bin/jaeles scan -L 3 -c 100 -s ~/jaeles-signatures/ -u @ | ~/go/bin/notify
+cat gau | ~/go/bin/qsreplace | sort -u | head -n 1000 | xargs -I@ ~/go/bin/jaeles scan -L 3 -c 100 -s ~/jaeles-signatures/ -u @ | ~/go/bin/notify
